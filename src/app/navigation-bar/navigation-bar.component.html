@@ -1,0 +1,31 @@
+<nav class="topnav" [class.topnav-open]="isMenuOpen">
+    <!-- Centered link -->
+
+
+
+    <div class="topnav-left">
+        <h1>Sahanan</h1>
+        <h1>Yogarasa</h1>
+    </div>
+
+    <div class="burger-content" [class.is-open]="isMenuOpen">
+        <div class="topnav-centered">
+            <a href="#home">About</a>
+            <a href="#Experience">Experience</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <div class="topnav-right switcher">
+            <app-theme-switcher></app-theme-switcher>
+        </div>
+
+    </div>
+
+
+    <button mat-icon-button class="menu-button" (click)="toggleMenu()">
+        <mat-icon>{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
+    </button>
+
+
+</nav>
