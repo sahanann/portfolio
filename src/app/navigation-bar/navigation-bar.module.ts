@@ -5,13 +5,15 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
 
 
 
 @NgModule({
   declarations: [
     NavigationBarComponent,
-    ThemeSwitcherComponent
+    ThemeSwitcherComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule,

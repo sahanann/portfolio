@@ -16,15 +16,32 @@
         margin-left: 5px;
     }
 
-    .sun-icon, .moon-icon {
+    .sun-icon,
+    .moon-icon {
         color: variables.$text1;
+        font-size: 26px;
+    }
+
+    @media screen and (min-width: variables.$mobile-breakpoint) and (max-width: variables.$tablet-breakpoint) {
+        .sun-icon,
+        .moon-icon {
+            font-size: 20px;
+        }
+
+        .sun-icon {
+            margin-right: -3px;
+        }
+
+        .moon-icon {
+            margin-left: 4px;
+        }
     }
 }
 
-$switch-width: 60px;
-$switch-height: calc($switch-width / 2);
-$pill-size: calc($switch-height - ($switch-width / 10));
-$pill-padding: calc(($switch-width / 10) / 2);
+// $switch-width: 60px;
+// $switch-height: calc($switch-width / 2);
+// $pill-size: calc($switch-height - ($switch-width / 10));
+// $pill-padding: calc(($switch-width / 10) / 2);
 
 input[type="checkbox"] {
     height: 0;
@@ -34,38 +51,90 @@ input[type="checkbox"] {
     visibility: hidden;
 }
 
-label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: $switch-width;
-    height: $switch-height;
-    background: variables.$primary400;
-    display: block;
-    border-radius: $switch-height;
-    position: relative;
+@media screen and (min-width: variables.$mobile-breakpoint) and (max-width: variables.$tablet-breakpoint) {
+    $switch-width: 40px;
+    $switch-height: calc($switch-width / 2);
+    $pill-size: calc($switch-height - ($switch-width / 10));
+    $pill-padding: calc(($switch-width / 10) / 2);
 
-    &:after {
-        content: "";
-        position: absolute;
-        top: $pill-padding;
-        left: $pill-padding;
-        width: $pill-size;
-        height: $pill-size;
-        background: variables.$background-color;
-        border-radius: $pill-size;
-        transition: 0.3s;
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: $switch-width;
+        height: $switch-height;
+        background: variables.$primary400;
+        display: block;
+        border-radius: $switch-height;
+        position: relative;
+    
+        &:after {
+            content: "";
+            position: absolute;
+            top: $pill-padding;
+            left: $pill-padding;
+            width: $pill-size;
+            height: $pill-size;
+            background: variables.$background-color;
+            border-radius: $pill-size;
+            transition: 0.3s;
+        }
     }
+    
+    input:checked + label {
+        background: variables.$primary400;
+    }
+    
+    input:checked + label:after {
+        left: calc(100% - $pill-padding);
+        transform: translateX(-100%);
+    }
+    
+    label:active:after {
+        width: $switch-height;
+    }
+    
 }
 
-input:checked + label {
-    background: variables.$primary400;
-}
+@media not screen and (min-width: variables.$mobile-breakpoint) and (max-width: variables.$tablet-breakpoint) {
+    $switch-width: 60px;
+    $switch-height: calc($switch-width / 2);
+    $pill-size: calc($switch-height - ($switch-width / 10));
+    $pill-padding: calc(($switch-width / 10) / 2);
 
-input:checked + label:after {
-    left: calc(100% - $pill-padding);
-    transform: translateX(-100%);
-}
-
-label:active:after {
-    width: $switch-height;
+    label {
+        cursor: pointer;
+        text-indent: -9999px;
+        width: $switch-width;
+        height: $switch-height;
+        background: variables.$primary400;
+        display: block;
+        border-radius: $switch-height;
+        position: relative;
+    
+        &:after {
+            content: "";
+            position: absolute;
+            top: $pill-padding;
+            left: $pill-padding;
+            width: $pill-size;
+            height: $pill-size;
+            background: variables.$background-color;
+            border-radius: $pill-size;
+            transition: 0.3s;
+        }
+    }
+    
+    input:checked + label {
+        background: variables.$primary400;
+    }
+    
+    input:checked + label:after {
+        left: calc(100% - $pill-padding);
+        transform: translateX(-100%);
+    }
+    
+    label:active:after {
+        width: $switch-height;
+    }
+    
 }
