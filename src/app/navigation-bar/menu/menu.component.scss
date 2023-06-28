@@ -34,7 +34,7 @@
         &::before {
             background: radial-gradient(
                 200px circle at var(--mouse-x) var(--mouse-y),
-                var(--primary400),
+                var(--primary300),
                 transparent 40%
             );
             border-radius: inherit;
@@ -46,6 +46,7 @@
             top: 0px;
             transition: opacity 200ms, height 200ms, width 200ms;
             width: 100%;
+            backdrop-filter: blur(10px);
         }
 
 

@@ -62,6 +62,7 @@ $portfolio-theme: mat.define-light-theme((
     --primary200-hsl: 152, 79%, 93%;
     --primary300-hsl: 152, 75%, 87%;
     --primary400-hsl: 152, 50%, 68%;
+    --normal1-hsl: 0, 0%, 0%;
 }
 
 .dark-theme {
@@ -78,6 +79,7 @@ $portfolio-theme: mat.define-light-theme((
     --primary200-hsl: 160, 4%, 13%;
     --primary300-hsl: 165, 8%, 21%;
     --primary400-hsl: 168, 18%, 22%;
+    --normal1-hsl: 0, 0%, 100%;
 }
 
 html,
@@ -90,7 +92,7 @@ body {
     margin: 0;
     padding: 0;
     clear: both;
-    line-height: 0;
+    // line-height: 0;
 }
 
 html, body { height: 100%; }

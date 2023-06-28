@@ -1,12 +1,18 @@
 <app-navigation-bar></app-navigation-bar>
 
 <div class="body-holder">
-    <h1>Hi there! I'm Sahanan Yogarasa</h1>
+    <div class="portrait-info">
+        <img src="assets/portrait.png" alt="Italian Trulli">
+        <h1>
+            HEY <span>I’m Sahanan</span>, A <br>
+            <span>SOFTWARE DEVELOPPER</span> <br>
+            BASED IN <span>BELGIUM</span>
+        </h1>
+    </div>
 </div>
-<video [src]="getVideoSource()" autoplay muted loop plays-inline id="myVideo" type="video/mp4" oncanplay="this.play()"
-    onloadedmetadata="this.muted = true">
-</video>
 
-<!-- <video autoplay muted loop plays-inline id="myVideo" oncanplay="this.play()" onloadedmetadata="this.muted = true">
-    <source [src]="getVideoSource()" type="video/mp4">
-</video> -->
+<div class="video-container">
+    <video [src]="getVideoSource()" autoplay muted loop plays-inline type="video/mp4" oncanplay="this.play()"
+        onloadedmetadata="this.muted = true">
+    </video>
+</div>

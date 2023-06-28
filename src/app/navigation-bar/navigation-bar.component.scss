@@ -3,7 +3,7 @@
 .topnav {
     position: relative;
     overflow: hidden;
-    background-color: variables.$navbarColor;
+    // background-color: variables.$navbarColor;
     height: 100px;
     transition: all 0.2s ease-in-out;
 
@@ -16,6 +16,7 @@
         height: 60px;
         &.topnav-open {
             height: 540px;
+            backdrop-filter: blur(10px);
         }
     }
 }
@@ -33,7 +34,7 @@
     transition: all 200ms;
 
     h1 {
-        font-weight: 400;
+        font-weight: 500;
     }
 
     @media (max-width: variables.$tablet-breakpoint) {
