@@ -1,0 +1,22 @@
+@use "../variables";
+.body-holder {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: variables.$tablet-breakpoint) {
+        width: 96%;
+    }
+}
+
+#myVideo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -49,28 +49,40 @@ $portfolio-theme: mat.define-light-theme((
 }
 
 .light-theme {
-    --background-color: #F2FFF9;
-    --primary200: #DDFBED;
-    --primary300: #C7F7E1;
-    --primary400: #85d6b1;
-    --primary500: #358067;
+    --background-color: hsl(152, 100%, 97%);
+    --primary200: hsl(152, 79%, 93%);
+    --primary300: hsl(152, 75%, 87%);
+    --primary400: hsl(152, 50%, 68%);
+    --primary500: hsl(160, 41%, 35%);
+    --navbar-color: hsla(152, 78%, 93%, 0.265);
     --normal1: #000000;
     --text1: #000000;
+
+    --background-color-hsl: 152, 100%, 97%;
+    --primary200-hsl: 152, 79%, 93%;
+    --primary300-hsl: 152, 75%, 87%;
+    --primary400-hsl: 152, 50%, 68%;
 }
 
 .dark-theme {
-    --background-color: #1D1E1D;
-    --primary200: #202322;
-    --primary300: #313937;
-    --primary400: #2d413d;
-    --primary500: #358067;
+    --background-color: hsl(120, 2%, 12%);
+    --primary200: hsl(160, 4%, 13%);
+    --primary300: hsl(165, 8%, 21%);
+    --primary400: hsl(168, 18%, 22%);
+    --primary500: hsl(160, 41%, 35%);
+    --navbar-color: hsla(160, 4%, 13%, 0.265);
     --normal1: #ffffff;
     --text1: #f4f4f4;
+
+    --background-color-hsl: 120, 2%, 12%;
+    --primary200-hsl: 160, 4%, 13%;
+    --primary300-hsl: 165, 8%, 21%;
+    --primary400-hsl: 168, 18%, 22%;
 }
 
 html,
 body {
-    background-color: var(--background-color);
+    background-color: variables.$background-color;
     transition: variables.$bg-transition;
 }
 

@@ -17,4 +17,8 @@ export class AppComponent implements OnInit {
   }
 
   title = 'portfolio';
+
+  getVideoSource() {
+    return this.settings.theme === 'light-theme' ? 'assets/bg-light.mp4' : 'assets/bg-dark.mp4';
+  }
 }

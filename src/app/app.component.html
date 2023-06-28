@@ -1,1 +1,12 @@
 <app-navigation-bar></app-navigation-bar>
+
+<div class="body-holder">
+    <h1>Hi there! I'm Sahanan Yogarasa</h1>
+</div>
+<video [src]="getVideoSource()" autoplay muted loop plays-inline id="myVideo" type="video/mp4" oncanplay="this.play()"
+    onloadedmetadata="this.muted = true">
+</video>
+
+<!-- <video autoplay muted loop plays-inline id="myVideo" oncanplay="this.play()" onloadedmetadata="this.muted = true">
+    <source [src]="getVideoSource()" type="video/mp4">
+</video> -->

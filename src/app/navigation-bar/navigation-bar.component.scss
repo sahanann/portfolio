@@ -3,7 +3,7 @@
 .topnav {
     position: relative;
     overflow: hidden;
-    // background-color: variables.$primary200;
+    background-color: variables.$navbarColor;
     height: 100px;
     transition: all 0.2s ease-in-out;
 
@@ -30,6 +30,7 @@
     letter-spacing: 2px;
     padding-left: 20px;
     padding-top: 6px;
+    transition: all 200ms;
 
     h1 {
         font-weight: 400;
@@ -56,11 +57,10 @@
 
 .switcher {
     position: absolute;
-    top: 30px;
+    top: 36px;
     right: 20px;
 
     @media (max-width: variables.$tablet-breakpoint) {
-        top: 24px;
         right: 10px;
     }
 
